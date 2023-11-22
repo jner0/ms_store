@@ -31,16 +31,8 @@ class Server {
     this.app.use(cors());
     //lectura y parseo del body
     this.app.use(express.json());
-    //Directorio publico
-    // this.app.use(express.static("public"));
-    // //FileUpload o carga de archivos
-    // this.app.use(
-    //   fileUpload({
-    //     useTempFiles: true,
-    //     tempFileDir: "/tmp/",
-    //     createParentPath: true,
-    //   })
-    // );
+
+    this.app.use(express.static("public"));
   }
 
   routes() {
